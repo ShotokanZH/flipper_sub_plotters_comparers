@@ -8,7 +8,10 @@ This repository basically contains the tools we used to plot and compare the fli
 
 In this repository you will find two scripts:
 - `plotall.py`
+  - plots multiple .sub files simultaneously
 - `plot_delimiter.py`
+  - searches for similar chunks based on a delimiter value, groups and plots those chunks
+
 
 The usage is described in the next chapter.
 
