@@ -34,8 +34,11 @@ def main():
                         break
                     if line.startswith("RAW_Data: "):
                         for d in line.split(" ")[1:]:
-                            d = int(d)
-                            ylist.append(d)
+                            try:
+                                d = int(d)
+                                ylist.append(d)
+                            except ValueError:
+                                continue
                             if delimiter <= 0:
                                 if d <= delimiter:
                                     delimiters.append(len(ylist) - 1)
