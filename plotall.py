@@ -23,8 +23,11 @@ def main():
                         break
                     if line.startswith("RAW_Data: "):
                         for d in line.split(" ")[1:]:
-                            d = int(d)
-                            y.append(d)
+                            try:
+                                d = int(d)
+                                y.append(d)
+                            except ValueError:
+                                continue
                 fig.append_trace(dict(x=list(range(0, len(y))), y=y,
                                       mode='lines', name=fname), 1, 1)
 
